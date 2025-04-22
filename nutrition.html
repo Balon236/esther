@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Nutrition - Animal Care Hub</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brown">
+        <!-- ... same nav as index.html ... -->
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header py-5 bg-light-brown">
+        <div class="container text-center">
+            <h1 class="display-4">Animal Nutrition Guide</h1>
+            <p class="lead">Feeding recommendations and nutritional requirements for different animals</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="mb-5">
+                        <h2 class="mb-4">Nutritional Requirements</h2>
+                        <p>Proper nutrition is essential for animal health, growth, reproduction, and productivity. Requirements vary by species, age, and purpose.</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Macronutrients</h3>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><strong>Proteins:</strong> For growth and repair</li>
+                                            <li class="list-group-item"><strong>Carbohydrates:</strong> Energy source</li>
+                                            <li class="list-group-item"><strong>Fats:</strong> Concentrated energy, essential fatty acids</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Micronutrients</h3>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><strong>Vitamins:</strong> Various metabolic functions</li>
+                                            <li class="list-group-item"><strong>Minerals:</strong> Bone formation, enzyme functions</li>
+                                            <li class="list-group-item"><strong>Water:</strong> Most critical nutrient</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <h2 class="mb-4">Feeding Recommendations</h2>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead class="bg-brown text-white">
+                                    <tr>
+                                        <th>Animal</th>
+                                        <th>Daily Food Requirement</th>
+                                        <th>Key Nutrients</th>
+                                        <th>Feeding Tips</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Adult Dog</td>
+                                        <td>2-3% of body weight</td>
+                                        <td>Protein (18-25%), fats (10-15%)</td>
+                                        <td>Divide into 2 meals, provide fresh water</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dairy Cow</td>
+                                        <td>3-4% of body weight (dry matter)</td>
+                                        <td>Fiber, protein (16-18%), calcium</td>
+                                        <td>Balance forage and concentrate, adjust for lactation</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Layer Hen</td>
+                                        <td>100-120g/day</td>
+                                        <td>Protein (16-18%), calcium (3.5-4%)</td>
+                                        <td>Provide oyster shell separately, fresh water always</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-header bg-brown text-white">
+                            <h3 class="mb-0">Feed Calculator</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="feedCalculator">
+                                <div class="mb-3">
+                                    <label class="form-label">Animal Type</label>
+                                    <select class="form-select">
+                                        <option>Dog</option>
+                                        <option>Cat</option>
+                                        <option>Cattle</option>
+                                        <option>Poultry</option>
+                                        <option>Goat</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Weight (kg)</label>
+                                    <input type="number" class="form-control" min="1">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Life Stage</label>
+                                    <select class="form-select">
+                                        <option>Growth</option>
+                                        <option>Adult Maintenance</option>
+                                        <option>Pregnancy</option>
+                                        <option>Lactation</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-brown w-100">Calculate</button>
+                            </form>
+                            <div id="calculatorResult" class="mt-3 p-3 bg-light rounded d-none">
+                                <h5>Recommended Daily Feed:</h5>
+                                <p id="resultAmount" class="fw-bold">X kg/day</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header bg-brown text-white">
+                            <h3 class="mb-0">Local Feed Resources</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Maize bran</li>
+                                <li class="list-group-item">Palm kernel cake</li>
+                                <li class="list-group-item">Cotton seed cake</li>
+                                <li class="list-group-item">Brewers' grains</li>
+                                <li class="list-group-item">Legume hays</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-dark-brown text-white py-4">
+        <!-- ... same footer as index.html ... -->
+    </footer>
+
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
